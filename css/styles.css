@@ -1,0 +1,306 @@
+
+/* - - - - - - - - - - - - - RESET CSS - - - - - - - - - - - - - */
+
+/* Reseteamos los margin y padding de todas las etiquetas. */
+* {
+  margin          : 0;
+  padding         : 0;
+  border          : 0;
+  box-sizing      : border-box;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display : block;
+}
+
+/* ... excepto los que se encuentran en párrafos. */
+p a {
+  display : inline;
+}
+
+/* Quitamos los puntos de los <li>. */
+li {
+  list-style-type : none;
+}
+
+/* Configuramos anclas suaves. */
+html {
+  scroll-behavior : smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto. */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size       : 1em;
+  font-weight     : inherit;
+  font-style      : inherit;
+  text-decoration : none;
+  color           : inherit;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios. */
+form, input, textarea, select, button, label {
+  font-family       : inherit;
+  font-size         : inherit;
+  hyphens           : auto;
+  background-color  : transparent;
+  display           : flex;
+  color             : inherit;
+  /* opcional   appearance        : none; */
+}
+
+/* Evitamos problemas con las imágenes. */
+img, picture, video, iframe {
+  max-width       : 100%;
+  width           : 100%;
+  display         : flex; 
+  object-fit      : cover;
+  object-position : center center;
+}
+
+/* Configuramos fondo y la tipografía para toda la web. */
+:root {
+  --black       : #1e1e1e;
+  --red         : #ff4553;
+  --white       : #fefefe;
+
+  --titulo      : "Orbitron-Variable", sans-serif;
+  --texto       : "Roboto-Variable", sans-serif;
+  --textoItalic : "Roboto-Italic-Variable", sans-serif;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+
+  font-family: var(--texto);
+  font-weight: 300;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* HEADER */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 110px;
+  
+  padding: 30px 60px;
+}
+
+.logo__link {
+  cursor: url(/assets/imgs/cursor.png) 0 0, pointer;
+}
+
+.logo__img{
+  width: 150px;
+}
+
+.nav__menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+
+  color: var(--black);
+  font-family: var(--titulo);
+  font-weight: 400;
+}
+
+.menu__link {
+  transition: color .5s ease;
+  cursor: url(/assets/imgs/cursor.png) 0 0, pointer;
+
+  &:hover {
+    color: var(--red);
+  }
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger__bar {
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin: 8px auto;
+
+  background-color: var(--red);
+  transition: all .3s ease-in-out;
+}
+/* - - - HEADER @QUERIES - - -  */
+@media (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    left: -100%;
+    top: 110px;
+    flex-direction: column;
+    row-gap: 35px;
+    width: 100%;
+    padding: 20px 0;
+
+    background-color: var(--white);
+    text-align: center;
+
+    transition: .3s;
+  }
+  .nav__menu--active {
+    left: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .burger--active .burger__bar {
+    &:nth-child(1) {
+      transform: translateY(11px) rotate(45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: translateY(-11px) rotate(-45deg);
+    }
+  }
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* HOME */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.home {
+  display: flex;
+  justify-content: left;
+  align-items: end;
+  height: 600px;
+  padding: 120px 85px;
+
+  background: linear-gradient(#0006, #0006), url(/assets/imgs/masterhead.png) 60% / cover;
+}
+
+.home__container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  width: 50%;
+
+  font-family: var(--titulo);
+}
+
+.home__title {
+  font-size: 1.6em;
+  text-wrap: balance;
+}
+
+.home__info {
+  width: 70%;
+  font-family: var(--texto);
+  font-weight: 200;
+  text-wrap: pretty;
+}
+
+.home__button {
+  padding: 10px;
+  cursor: url(/assets/imgs/cursor.png) 0 0, pointer;
+
+  background-color: var(--red);
+  border: 2px solid  var(--red);
+  border-radius: 10px;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--red);
+  }
+
+  &:active {
+    background-color: var(--red);
+    color: var(--white);
+  }
+}
+/* - - - HOME @QUERIES - - -  */
+@media (max-width: 768px) {
+  .home {
+    justify-content: center;
+    align-items: center;
+    padding: 120px 60px;
+  }
+  .home__container {
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+
+  }
+  .home__title {
+    font: 1.4em;
+    text-align: center;
+  }
+  .home__info {
+    width: 70%;
+  }
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* NOSOTROS */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.nosotros__container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 60%;
+}
+
+.nosotros__title {
+  font-family: var(--titulo);
+  font-size: 1.8em;
+  font-weight: 800;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--red);
+}
+
+.nosotros__info {
+  text-align: center;
+  text-wrap: pretty;
+  line-height: 1.5em;
+}
+
+.nosotros__info strong {
+  font-weight: 800;
+}
+
+.nosotros__icon{
+  width: 30px;
+  margin-top: 15px;
+}
+/* - - - NOSOTROS @QUERIES - - -  */
+@media (max-width: 768px) {
+  .nosotros__container {
+    width: 80%;
+  }
+  .nosotros__title {
+    line-height: .8em;
+  }
+}

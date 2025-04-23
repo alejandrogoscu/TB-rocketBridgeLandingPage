@@ -14,7 +14,7 @@
   
   <header class="header">
     <nav class="navbar">
-      <a href="#home" class="logo__link"><img class="logo__img" src="/assets/imgs/logo-header.png" alt="Logo de RocketBridge con un cohete sobrevolando un puente"></a>
+      <a href="/index.html" class="logo__link"><img class="logo__img" src="/assets/imgs/logo-header.png" alt="Logo de RocketBridge con un cohete sobrevolando un puente"></a>
 
       <ul class="nav__menu" id="nav__menu">
         <li class="menu__item"><a href="#nosotros" class="menu__link">Nosotros</a></li>
@@ -32,7 +32,7 @@
   </header>
 
   <main class="main">
-    <section class="home" id="home">
+    <section class="home">
       <div class="home__container">
         <h1 class="home__title">Tu Viaje al Espacio Empieza Aquí</h1>
 
@@ -54,7 +54,112 @@
 
         <img class="nosotros__icon" src="/assets/imgs/icono-bajar.png" alt="fleca hacia abajo">
       </div>
+    </section>
 
+    <section class="servicios" id="servicios">
+      <div class="servicios__container">
+        <h2 class="servicios__title">NUESTROS SERVICIOS</h2>
+
+        <div class="servicios__info">
+          <div class="info__container">
+            <div class="info__data">
+              <h3 class="data__title">Lanzamientos Comerciales a Órbita Baja</h3>
+              <p class="data__text">
+                Alcanza el espacio sin complicaciones. Rocket Bridge ofrece lanzamientos a órbita baja, ideales para empresas que desean colocar satélites comerciales, equipos de observación o proyectos de telecomunicaciones.
+              </p>
+            </div>
+
+            <div class="info__data">
+              <h3 class="data__title">Experiencia de Vuelo Suborbital</h3>
+              <p class="data__text">
+                Vuela más allá de tus sueños y experimenta la gravedad cero. Para entusiastas del espacio y exploradores modernos, Rocket Bridge ofrece una experiencia de vuelo suborbital que te permitirá vivir la gravedad cero y observar la Tierra desde una perspectiva única.
+              </p>
+            </div>
+
+            <div class="info__data">
+              <h3 class="data__title">Laboratorio Espacial en Microgravedad</h3>
+              <p class="data__text">
+                Lleva tus investigaciones cientificas al próximo nivel. Rocket Bridge facilita el acceso a un laboratorio espacial en microgravedad, ideal para investigaciones avanzadas en condiciones únicas.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="info__img">
+            <img class="info__img" src="/assets/imgs/servicios.png" alt="Un cohete despegando hacia el cielo y gente observándolo.">
+          </div>
+        </div>
+
+        <button class="servicios__button">Contacta con nosotros</button>
+      </div>
+    </section>
+
+    <section class="equipo" id="equipo">
+      <div class="equipo__container">
+        <h2 class="equipo__title">EL EQUIPO</h2>
+        
+        <div class="equipo__cards">
+          <div class="equipo__card">
+            <img class="card__img" src="/assets/imgs/persona-1.png" alt="Marina Márquez">
+            <h3 class="card__title">Marina Márquez</h3>
+            <h4 class="card__subtitle">Fundadora y CEO</h4>
+            <p class="card__content">
+              Ingeniera aeroespacial con más de 20 años de experiencia en tecnología de lanzamiento y propulsión. Marina fundó Rocket Bridge con la misión de hacer el espacio más accesible. Su liderazgo y pasión por la innovación han sido el motor que ha llevado a Rocket Bridge a convertirse en una de las empresas más confiables en el mercado.
+            </p>
+          </div>
+
+          <div class="equipo__card">
+            <img class="card__img" src="/assets/imgs/persona-2.png" alt="Laura Reyes">
+            <h3 class="card__title">Laura Reyes</h3>
+            <h4 class="card__subtitle">Directora de Operaciones</h4>
+            <p class="card__content">
+              Especialista en logística y gestión de operaciones especiales. Laura es la mente maestra detrás de la coordinación de lanzamientos y la supervisión de todos los aspectos técnicos. Su enfoque en la precisión y la eficiencia ha permitido a Rocket Bridge cumplir consistentemente con los plazos y garantizar la seguridad de cada misión.
+            </p>
+          </div>
+
+          <div class="equipo__card">
+            <img class="card__img" src="/assets/imgs/persona-3.png" alt="Tomás Gutiérrez">
+            <h3 class="card__title">Tomás Gutiérrez</h3>
+            <h4 class="card__subtitle">Jefe de Tecnología</h4>
+            <p class="card__content">
+              Ingeniero de sistemas con un amplio conocimiento en desarrollo de software y sistemas de navegación. Tomás lidera la creación e implementación de los sistemas informáticos de Rocket Bridge. Su experiencia en tecnología espacial asegura que cada misión esté respaldada por sistemas seguros y de última generación.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <div class="contacto__container">
+        <div class="contacto__text">
+          <h2 class="contacto__title">Contacto</h2>
+
+          <p class="contacto__content">
+            Queremos ayudarte a alcanzar tus metas en el espacio. Si tienes preguntas sobre nuestros servicios o deseas información adicional sobre cómo comenzar una misión, no dudes en ponerte en contacto con nosotros.
+          </p>
+          <span class="contacto__span">¡Estamos listos para construir un puente entre tu visión y el cosmos!</span>
+        </div>
+
+        <form class="contacto__form" name="formulario" method="post" action="#">
+          <label class="form__label" for="name">Nombre
+            <input class="form__input" type="text" name="name" id="name" required>
+          </label>
+
+          <label class="form__label" for="mail">Correo electrónico
+            <input class="form__input" type="email" name="mail" id="mail" required>
+          </label>
+
+          <label class="form__label" for="subject">Asunto
+            <input class="form__input" type="text" name="subject" id="subject" required>
+          </label>
+
+          <label class="form__label" for="message">Mensaje
+            <textarea class="form__textarea" name="message" id="message" rows="6" maxlength="200" required></textarea>
+          </label>
+
+          <button class="form__button">Enviar</button>
+        </form>  
+      </div>
     </section>
   </main>
 

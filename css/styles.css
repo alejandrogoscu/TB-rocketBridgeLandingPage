@@ -369,7 +369,6 @@ body {
 
 .servicios__button {
   padding: 10px;
-  cursor: url(/assets/imgs/cursor.png) 0 0, pointer;
 
   font-family: var(--titulo);
   background-color: var(--red);
@@ -385,6 +384,10 @@ body {
     background-color: var(--red);
     color: var(--white);
   }
+}
+
+.servicios__button, .servicios__button__link {
+  cursor: url(/assets/imgs/cursor.png) 0 0, pointer;
 }
 /* - - - SERVICIOS @QUERIES - - -  */
 @media (max-width: 1190px) {
@@ -555,6 +558,14 @@ body {
   border-radius: 5px;
 }
 
+.form__submitted {
+  width: 50%;
+}
+.form__submitted input:invalid, .form__submitted textarea:invalid {
+  border: 1px solid var(--red);
+
+}
+
 .form__textarea {
   width: 100%;
   padding: 5px;
@@ -653,8 +664,6 @@ body {
   align-items: center;
   gap: 15px;
 }
-
-.fredes__item {}
 
 .fredes__logo {
   width: 35px;

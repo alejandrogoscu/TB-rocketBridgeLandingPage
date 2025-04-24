@@ -90,7 +90,7 @@
           </div>
         </div>
 
-        <button class="servicios__button">Contacta con nosotros</button>
+        <button class="servicios__button"><a class="servicios__button__link" href="#contacto">Contacta con nosotros</a></button>
       </div>
     </section>
 
@@ -140,9 +140,9 @@
           <span class="contacto__span">¡Estamos listos para construir un puente entre tu visión y el cosmos!</span>
         </div>
 
-        <form class="contacto__form" name="formulario" method="post" action="#">
+        <form class="contacto__form" id="contacto__form" name="formulario" method="post" action="#">
           <label class="form__label" for="name">Nombre
-            <input class="form__input" type="text" name="name" id="name" required>
+            <input class="form__input" type="text" name="name" id="name" pattern="[A-Za-z]{2,20}"  required>
           </label>
 
           <label class="form__label" for="mail">Correo electrónico
@@ -150,14 +150,14 @@
           </label>
 
           <label class="form__label" for="subject">Asunto
-            <input class="form__input" type="text" name="subject" id="subject" required>
+            <input class="form__input" type="text" name="subject" id="subject" minlength="2" maxlength="20" required>
           </label>
 
           <label class="form__label" for="message">Mensaje
             <textarea class="form__textarea" name="message" id="message" rows="6" maxlength="200" required></textarea>
           </label>
 
-          <button class="form__button">Enviar</button>
+          <button class="form__button" id="form__button">Enviar</button>
         </form>  
       </div>
     </section>

@@ -432,7 +432,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 35px;
+  gap: 70px;
 }
 
 .equipo__title {
@@ -447,7 +447,7 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 70px;
 }
 
 .equipo__card {
@@ -460,6 +460,11 @@ body {
 
   font-family: var(--titulo);
   text-align: center;
+  transition: all .5s ease;
+
+  &:nth-child(2) {
+    transform: scale(1.1);
+  }
 }
 
 .card__img {

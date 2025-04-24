@@ -83,6 +83,8 @@ body {
 .header {
   position: sticky;
   top: 0;
+  z-index: 1;
+
   background-color: var(--white);
 }
 
@@ -457,14 +459,12 @@ body {
   align-items: center;
   width: 280px;
   padding: 10px;
+  margin-bottom: 45px;
 
   font-family: var(--titulo);
   text-align: center;
-  transition: all .5s ease;
-
-  &:nth-child(2) {
-    transform: scale(1.1);
-  }
+  opacity: 1;
+  transition: opacity .5s ease;
 }
 
 .card__img {
@@ -655,6 +655,7 @@ body {
   gap: 3px;
 
   font-family: var(--titulo);
+  font-size: 1.1em;
   text-align: center;
 }
 

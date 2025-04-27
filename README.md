@@ -8,9 +8,9 @@ Utilizando HTML, CSS y JavaScript y con un diseño responsive.
 
 Versión Desktop:
 
-![Imagen de Referencia](./assets/Landing-Rocket.jpg)
+![Imagen de Referencia](/assets/imgs/Landing-Rocket.jpg)
 
 Versión Responsive:
 
-![Imagen de Referencia Mobile](./assets/Landing-Rocket-Mobile.jpg)
+![Imagen de Referencia Mobile](/assets/imgs/Landing-Rocket-Mobile.jpg)
 
